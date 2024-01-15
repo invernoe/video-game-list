@@ -1,0 +1,47 @@
+:root {
+  --main-color: #272b30;
+  --second-color: #32383e;
+  --third-color: #09c;
+  --color-text: #fff;
+  --btn-main-color: #272729;
+  --navbar-color: #3a497b;
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--main-color);
+}
+
+.comfortaa-font {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nerko-one-font {
+  font-family: "Nerko One", cursive;
+}
+
+.max-vh-30 {
+  max-height: 30vh;
+}
+
+.navbar-bg {
+  background-color: var(--navbar-color);
+}
+
+nav {
+  margin-top: -30px;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: var(--third-color) !important;
+  transition: 0.5s;
+}
