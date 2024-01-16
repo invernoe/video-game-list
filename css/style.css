@@ -18,6 +18,10 @@ body {
   font-optical-sizing: auto;
 }
 
+a {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -36,12 +40,27 @@ h6,
   background-color: var(--navbar-color);
 }
 
+.second-color-bg {
+  background-color: var(--second-color);
+}
+
 nav {
   margin-top: -30px;
+  z-index: 999;
 }
 
 .nav-item .nav-link.active,
 .nav-item .nav-link:hover {
   color: var(--third-color) !important;
   transition: 0.5s;
+}
+
+#gameListContent .card {
+  filter: grayscale(50%);
+  transition: 0.5s;
+}
+
+#gameListContent .card:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
