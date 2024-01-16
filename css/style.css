@@ -18,7 +18,8 @@ body {
   font-optical-sizing: auto;
 }
 
-a {
+a,
+.card {
   cursor: pointer;
 }
 
