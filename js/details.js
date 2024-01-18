@@ -4,6 +4,8 @@ class Details {
   constructor() {}
 
   static async fetchDetails(id) {
+    Ui.startLoading();
+
     const url =
       "https://free-to-play-games-database.p.rapidapi.com/api/game?id=" + id;
     const options = {
@@ -21,6 +23,8 @@ class Details {
     } catch (error) {
       console.error(error);
     }
+
+    Ui.endLoading();
   }
 }
 

@@ -37,7 +37,17 @@ class Ui {
   }
 
   static displayGameDetails(game) {
-    
+
+  }
+
+  static startLoading() {
+    //once loading starts display loading overlay
+    document.querySelector("#loading").classList.remove("d-none");
+  }
+
+  static endLoading() {
+    //once processing is done toggle back d-none class to loading
+    document.querySelector("#loading").classList.add("d-none");
   }
 }
 

@@ -21,6 +21,8 @@ class Game {
   }
 
   async fetchData(genre) {
+    Ui.startLoading();
+    
     const url =
       "https://free-to-play-games-database.p.rapidapi.com/api/games?category=" +
       genre;
@@ -40,6 +42,8 @@ class Game {
     } catch (error) {
       console.error(error);
     }
+
+    Ui.endLoading();
   }
 
   setupCardLinks() {
