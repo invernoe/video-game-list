@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <header class="d-none">
+  <body class="position-relative">
+    <header>
       <img
         class="w-100 object-fit-cover max-vh-30"
         src="assets/wrapper.png"
@@ -31,7 +31,7 @@
       />
     </header>
     <nav
-      class="d-none navbar navbar-dark navbar-expand-lg position-sticky top-0 py-0"
+      class="navbar navbar-dark navbar-expand-lg position-sticky top-0 py-0"
     >
       <div class="container navbar-bg rounded-4 py-2 shadow">
         <a class="navbar-brand nerko-one-font fs-3 fw-lighter" href="#">
@@ -83,56 +83,20 @@
       </div>
     </nav>
 
-    <main class="py-5 d-none">
+    <main class="py-5">
       <div class="container">
         <div id="gameListContent" class="row g-4"></div>
       </div>
     </main>
-    <section id="details" class="min-vh-100 text-light">
+    <section id="details" class="min-vh-100 text-light d-none">
       <div class="container py-5">
         <div class="d-flex justify-content-between mb-4">
           <h1>Details Game</h1>
-          <button class="btn text-muted">
+          <button id="detailsCloseBtn" class="btn text-muted">
             <i class="fa-solid fa-xmark fa-2xl"></i>
           </button>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <img
-              class="w-100"
-              src="https://www.freetogame.com/g/517/thumbnail.jpg"
-              alt=""
-            />
-          </div>
-          <div class="col-lg-8">
-            <h1>Title: LostArk</h1>
-            <p class="mb-4">
-              Category:<span class="third-color-bg ms-2 p-1 rounded text-dark"
-                >ARPG</span
-              >
-            </p>
-            <p class="mb-4">
-              Platform:<span class="third-color-bg ms-2 p-1 rounded text-dark"
-                >Windows</span
-              >
-            </p>
-            <p class="mb-4">
-              Status:<span class="third-color-bg ms-2 p-1 rounded text-dark"
-                >Live</span
-              >
-            </p>
-            <p>
-              Smilegate's free-to-play multiplayer ARPG is a massive adventure
-              filled with lands waiting to be explored, people waiting to be
-              met, and an ancient evil waiting to be destroyed. In Lost Ark,
-              players enter the world of Arkesia and embark on a journey across
-              several lands in a quest to locate the Ark of Legends. Stop the
-              demon Kazeros and his army before they seize control. And hurry,
-              the demons are searching for the Ark too. Choose to play as one of
-              several classes ranging from the sword-wielding w
-            </p>
-            <button class="btn btn-outline-warning fs-5">Show Game</button>
-          </div>
+        <div id="detailsBody" class="row">
         </div>
       </div>
     </section>

@@ -19,12 +19,30 @@ class Details {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      Ui.displayGameDetails(result)
+      Ui.displayGameDetails(result);
+      this.setupCloseButton();
+      this.setupViewGameButton(result.game_url);
     } catch (error) {
       console.error(error);
     }
 
     Ui.endLoading();
+  }
+
+  static setupCloseButton() {
+    document
+      .querySelector("#detailsCloseBtn")
+      .addEventListener("click", (e) => {
+        Ui.closeDetailsWindow();
+      });
+  }
+
+  static setupViewGameButton(url) {
+    document
+      .querySelector("#detailsViewGameBtn")
+      .addEventListener("click", (e) => {
+        open(url);
+      });
   }
 }
 
